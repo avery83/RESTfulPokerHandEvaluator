@@ -1,0 +1,68 @@
+img.selected {
+    border: 3px solid green;
+}
+img:hover {
+    cursor: pointer;
+}
+
+#sevenToEvaluate {
+    margin-top: 7em;
+    text-align: center;
+}
+#heading {
+    background-color: #444444;
+    color: white;
+}
+#gallery {
+    background-color: #3e8f3e;
+    border-style: solid;
+}
+body {
+    background-color: #fafafa;
+    font-family:'Roboto';
+}
+table {
+    margin: auto;
+    margin-bottom: 2em;
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+
+table, th, td {
+
+
+}
+caption {
+    color: white;
+}
+
+.mastfoot {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #444444;
+    text-align: center;
+    height: 40px;
+}
+
+#footer {
+    padding:.5em;
+    color: white;
+}
+#buttons {
+    text-align: center;
+}
+#output {
+    text-align: center;
+    color: red;
+}
+
+#score {
+    color: red;
+}
+
+.btn {
+    margin: 0 auto;
+}
+
