@@ -10,58 +10,62 @@
     <title>Seven Card Poker Hand Evaluator</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" src="js/evaluator.js"></script>
 </head>
 <body>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
 
-<div class="container-fluid" id="heading"><h1>Seven Card Poker Hand Evaluator</h1></div>
-<div class="container-fluid" id="gallery">
-    <table>
-        <caption>Pick Seven Cards</caption>
+    <div class="container-fluid" id="heading">
+        <a href="https://github.com/avery83/RESTfulPokerHandEvaluator"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+        <h1>Seven Card Poker Hand Evaluator</h1>
+    </div>
+    <div class="container-fluid" id="gallery">
+        <table>
+            <caption>Pick Seven Cards and Click Evaluate to Get the Best Five Card Poker Hand</caption>
+            <tr><td><img id="2C" src="${pageContext.request.contextPath}/images/Card1.gif"/></td>
+            <td><img id="3C" src="${pageContext.request.contextPath}/images/Card2.gif"/></td>
+            <td><img id="4C" src="${pageContext.request.contextPath}/images/Card3.gif"/></td>
+            <td><img id="5C" src="${pageContext.request.contextPath}/images/Card4.gif"/></td>
+            <td><img id="6C" src="${pageContext.request.contextPath}/images/Card5.gif"/></td>
+            <td><img id="7C" src="${pageContext.request.contextPath}/images/Card6.gif"/></td>
+            <td><img id="8C" src="${pageContext.request.contextPath}/images/Card7.gif"/></td>
+            <td><img id="9C" src="${pageContext.request.contextPath}/images/Card8.gif"/></td>
+            <td><img id="10C" src="${pageContext.request.contextPath}/images/Card9.gif"/></td>
+            <td><img id="JC" src="${pageContext.request.contextPath}/images/Card10.gif"/></td>
+            <td><img id="QC" src="${pageContext.request.contextPath}/images/Card11.gif"/></td>
+            <td><img id="KC" src="${pageContext.request.contextPath}/images/Card12.gif"/></td>
+            <td><img id="AC" src="${pageContext.request.contextPath}/images/Card13.gif"/></td></tr>
 
-        <tr><td><img id="2C" src="${pageContext.request.contextPath}/images/Card1.gif"/></td>
-        <td><img id="3C" src="${pageContext.request.contextPath}/images/Card2.gif"/></td>
-        <td><img id="4C" src="${pageContext.request.contextPath}/images/Card3.gif"/></td>
-        <td><img id="5C" src="${pageContext.request.contextPath}/images/Card4.gif"/></td>
-        <td><img id="6C" src="${pageContext.request.contextPath}/images/Card5.gif"/></td>
-        <td><img id="7C" src="${pageContext.request.contextPath}/images/Card6.gif"/></td>
-        <td><img id="8C" src="${pageContext.request.contextPath}/images/Card7.gif"/></td>
-        <td><img id="9C" src="${pageContext.request.contextPath}/images/Card8.gif"/></td>
-        <td><img id="10C" src="${pageContext.request.contextPath}/images/Card9.gif"/></td>
-        <td><img id="JC" src="${pageContext.request.contextPath}/images/Card10.gif"/></td>
-        <td><img id="QC" src="${pageContext.request.contextPath}/images/Card11.gif"/></td>
-        <td><img id="KC" src="${pageContext.request.contextPath}/images/Card12.gif"/></td>
-        <td><img id="AC" src="${pageContext.request.contextPath}/images/Card13.gif"/></td></tr>
+            <tr><td><img id="2D" src="${pageContext.request.contextPath}/images/Card14.gif"/></td>
+            <td><img id="3D" src="${pageContext.request.contextPath}/images/Card15.gif"/></td>
+            <td><img id="4D" src="${pageContext.request.contextPath}/images/Card16.gif"/></td>
+            <td><img id="5D" src="${pageContext.request.contextPath}/images/Card17.gif"/></td>
+            <td><img id="6D" src="${pageContext.request.contextPath}/images/Card18.gif"/></td>
+            <td><img id="7D" src="${pageContext.request.contextPath}/images/Card19.gif"/></td>
+            <td><img id="8D" src="${pageContext.request.contextPath}/images/Card20.gif"/></td>
+            <td><img id="9D" src="${pageContext.request.contextPath}/images/Card21.gif"/></td>
+            <td><img  id="10D" src="${pageContext.request.contextPath}/images/Card22.gif"/></td>
+            <td><img id="JD" src="${pageContext.request.contextPath}/images/Card23.gif"/></td>
+            <td><img id="QD" src="${pageContext.request.contextPath}/images/Card24.gif"/></td>
+            <td><img id="KD" src="${pageContext.request.contextPath}/images/Card25.gif"/></td>
 
-        <tr><td><img id="2D" src="${pageContext.request.contextPath}/images/Card14.gif"/></td>
-        <td><img id="3D" src="${pageContext.request.contextPath}/images/Card15.gif"/></td>
-        <td><img id="4D" src="${pageContext.request.contextPath}/images/Card16.gif"/></td>
-        <td><img id="5D" src="${pageContext.request.contextPath}/images/Card17.gif"/></td>
-        <td><img id="6D" src="${pageContext.request.contextPath}/images/Card18.gif"/></td>
-        <td><img id="7D" src="${pageContext.request.contextPath}/images/Card19.gif"/></td>
-        <td><img id="8D" src="${pageContext.request.contextPath}/images/Card20.gif"/></td>
-        <td><img id="9D" src="${pageContext.request.contextPath}/images/Card21.gif"/></td>
-        <td><img  id="10D" src="${pageContext.request.contextPath}/images/Card22.gif"/></td>
-        <td><img id="JD" src="${pageContext.request.contextPath}/images/Card23.gif"/></td>
-        <td><img id="QD" src="${pageContext.request.contextPath}/images/Card24.gif"/></td>
-        <td><img id="KD" src="${pageContext.request.contextPath}/images/Card25.gif"/></td>
-        <td><img id="AD" src="${pageContext.request.contextPath}/images/Card26.gif"/></td></tr>
-        <tr><td><img id="2H" src="${pageContext.request.contextPath}/images/Card27.gif"/></td>
-        <td><img id="3H" src="${pageContext.request.contextPath}/images/Card28.gif"/></td>
-        <td><img id="4H" src="${pageContext.request.contextPath}/images/Card29.gif"/></td>
-        <td><img id="5H" src="${pageContext.request.contextPath}/images/Card30.gif"/></td>
-        <td><img id="6H" src="${pageContext.request.contextPath}/images/Card31.gif"/></td>
-        <td><img id="7H" src="${pageContext.request.contextPath}/images/Card32.gif"/></td>
-        <td><img id="8H" src="${pageContext.request.contextPath}/images/Card33.gif"/></td>
-        <td><img id="9H" src="${pageContext.request.contextPath}/images/Card34.gif"/></td>
-        <td><img id="10H" src="${pageContext.request.contextPath}/images/Card35.gif"/></td>
-        <td><img id="JH" src="${pageContext.request.contextPath}/images/Card36.gif"/></td>
-        <td><img id="QH" src="${pageContext.request.contextPath}/images/Card37.gif"/></td>
-        <td><img id="KH" src="${pageContext.request.contextPath}/images/Card38.gif"/></td>
-        <td><img id="AH" src="${pageContext.request.contextPath}/images/Card39.gif"/></td></tr>
-        <tr><td><img id="2S" src="${pageContext.request.contextPath}/images/Card40.gif"/></td>
+            <td><img id="AD" src="${pageContext.request.contextPath}/images/Card26.gif"/></td></tr>
+            <tr><td><img id="2H" src="${pageContext.request.contextPath}/images/Card27.gif"/></td>
+            <td><img id="3H" src="${pageContext.request.contextPath}/images/Card28.gif"/></td>
+            <td><img id="4H" src="${pageContext.request.contextPath}/images/Card29.gif"/></td>
+            <td><img id="5H" src="${pageContext.request.contextPath}/images/Card30.gif"/></td>
+            <td><img id="6H" src="${pageContext.request.contextPath}/images/Card31.gif"/></td>
+            <td><img id="7H" src="${pageContext.request.contextPath}/images/Card32.gif"/></td>
+            <td><img id="8H" src="${pageContext.request.contextPath}/images/Card33.gif"/></td>
+            <td><img id="9H" src="${pageContext.request.contextPath}/images/Card34.gif"/></td>
+            <td><img id="10H" src="${pageContext.request.contextPath}/images/Card35.gif"/></td>
+            <td><img id="JH" src="${pageContext.request.contextPath}/images/Card36.gif"/></td>
+            <td><img id="QH" src="${pageContext.request.contextPath}/images/Card37.gif"/></td>
+            <td><img id="KH" src="${pageContext.request.contextPath}/images/Card38.gif"/></td>
+            <td><img id="AH" src="${pageContext.request.contextPath}/images/Card39.gif"/></td></tr>
+
+            <tr><td><img id="2S" src="${pageContext.request.contextPath}/images/Card40.gif"/></td>
             <td><img id="3S" src="${pageContext.request.contextPath}/images/Card41.gif"/></td>
             <td><img id="4S" src="${pageContext.request.contextPath}/images/Card42.gif"/></td>
             <td><img id="5S" src="${pageContext.request.contextPath}/images/Card43.gif"/></td>
@@ -74,12 +78,10 @@
             <td><img id="QS" src="${pageContext.request.contextPath}/images/Card50.gif"/></td>
             <td><img id="KS" src="${pageContext.request.contextPath}/images/Card51.gif"/></td>
             <td><img id="AS" src="${pageContext.request.contextPath}/images/Card52.gif"/></td></tr>
-    </table>
-</div>
-
-
-        <div class="container">
-
+        </table>
+        <a href="http://jasonwavery.com"><span>Back To jasonwavery.com</span></a>
+    </div>
+    <div class="container">
         <select multiple class="form-control" id="lstBox1">
             <option value="2C">2C</option>
             <option value="3C">3C</option>
@@ -137,28 +139,19 @@
             <option value="KS">KS</option>
             <option value="AS">AS</option>
         </select>
-            </div>
+    </div>
 
-
-</div>
-
-
-
-<div class="container" id="sevenToEvaluate"></div>
-
-<br />
-<div class="container" id="buttons">
-<input type="button" class="btn btn-default" id="submitHand" value="VALIDATE"/>
-<input type="reset" class="btn btn-default" id="resetHand" value="RESET"/>
-</div>
-
-<div class="container" id="output"><h2 id="score"></h2></div>
-<div class="mastfoot container-fluid">
-<footer id="footer">
-    <div class="container"><p>&copy; 2017 Jason Avery.</p></div>
-</footer>
-</div>
-
+    <div class="container" id="sevenToEvaluate"></div>
+    <br />
+    <div class="container" id="buttons">
+        <input type="button" class="btn btn-default" id="submitHand" value="EVALUATE"/>
+        <input type="reset" class="btn btn-default" id="resetHand" value="RESET"/>
+    </div>
+    <div class="container" id="output"><h2 id="score"></h2></div>
+    <div class="mastfoot container-fluid">
+        <footer id="footer">
+            <div class="container"><p>&copy; 2017 Jason Avery.</p></div>
+        </footer>
+    </div>
 </body>
-
 </html>
